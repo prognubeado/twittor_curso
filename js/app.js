@@ -6,10 +6,10 @@ var swLocation = "/twittor_curso/sw.js"
 if (navigator.serviceWorker) {
 
     if (url.includes("localhost")) {
-        swlocation = "/sw.js";
+        swLocation = "/sw.js";
     }
 
-    navigator.serviceWorker.register(swlocation);
+    navigator.serviceWorker.register(swLocation);
 }
 
 
