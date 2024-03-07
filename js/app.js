@@ -1,7 +1,15 @@
 
+//Hago esto por si el sw no está en la raiz como es el caso de github https://prognubeado.github.io/twittor_curso/
+var url = window.location.href;
+var swLocation = "/twittor_curso/sw.js"
 
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register("/sw.js");
+
+    if (url.includes("localhost")) {
+        swlocation = "/sw.js";
+    }
+
+    navigator.serviceWorker.register(swlocation);
 }
 
 
